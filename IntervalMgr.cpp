@@ -29,9 +29,9 @@ IntervalManager::IntervalManager( void ) {
     }
 }
 //-------------------------------------------------------------------------------
-void IntervalManager::set( int index, Handler::Callback func, uint32_t interval, uint32_t now ) {
+void IntervalManager::set( int index, Handler::Callback func, uint32_t interval, uint32_t time ) {
     if( index < 0 || index >= INTERVAL_MAX_HANDLERS ) return;
-    handlers_[index].set( func, interval, now );
+    handlers_[index].set( func, interval, time );
 }
 //-------------------------------------------------------------------------------
 void IntervalManager::loop() {
